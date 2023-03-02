@@ -35,6 +35,7 @@ urlpatterns = [
     path('services/', include("servicesapp.urls")),
     path('order/', include("orderapp.urls")),
     re_path(r"media/(.*)", serve, {"document_root": settings.MEDIA_ROOT}),
+    re_path(r"static/(.*)", serve, {"document_root": settings.STATIC_URL}),
 ]
 
 # swagger urls
